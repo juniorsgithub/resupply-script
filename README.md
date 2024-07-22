@@ -96,24 +96,6 @@ It doesn't. But anything that comes after it overrides
 the `loadouts.cfg.X` settings. If you are sure you're not breaking
 anything, you can put it anywhere you like.
 
-### My loadouts are not being saved.
-
-Saving is done with `exec loadouts/save`. It should be called
-automatically with the command TF2 uses to exit.  
-If you close the game in some other way (ALT F4, closing the window,
-etc.), this command doesn't get executed.
-It is also possible (but unlikely) that a custom HUD may use
-a different command that doesn't work.  
-You can always save manually by executing the save script yourself.
-
-### How does it work?
-
-When saving, console logging is enabled
-(`con_logfile cfg/saved_loadouts.txt`) and current loadouts are echoed
-to the console, which gets them written into that file.  
-When loading loadouts, the file is executed (`exec saved_loadouts.txt`)
-and it sets active loadouts.  
-
 ### Doesn't it break when item servers are down?
 
 Yup.
