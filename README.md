@@ -25,7 +25,7 @@ and ubers (but not stored crits, heads or banner charges).
    [the latest release](https://github.com/juniorsgithub/tf2-loadouts-script/releases/latest/download/loadouts.vpk)
    and save it into your `tf/custom` folder
 
-2. Add `exec loadouts/load` to your `autoexec.cfg`
+2. Add `exec loadouts/init` to your `autoexec.cfg`
 
 3. Add `loadouts.<class>` **at the end** of each of your
    `<class>.cfg`  
