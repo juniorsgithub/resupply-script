@@ -17,4 +17,4 @@ remove=$(printf "|(?:%s)" "${remove[@]}")
 remove="s/${remove:1}//g;"
 
 # Run the regex.
-perl -pE "$remove" "$1"
+perl -pE "$remove" -e "chomp if eof" "$1"
