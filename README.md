@@ -62,6 +62,8 @@ You can set these aliases to execute arbitrary commands when changing lodouts.
 
 If you want to set these per class in your `<class>.cfg`, you need to
 do so **before** the `loadouts.<class>` line.
+If you want it set them globally, do so in your `autoexec.cfg` **after**
+the `exec loadouts/init` line.
 
 Don't forget to reset these aliases (and affected settings) for other classes,
 otherwise their values will carry over.
