@@ -8,7 +8,7 @@ remove=(
 '^\s*$'                 # blank lines
 '[ \t]+(?=[ ;"\t\n])'   # leading space 
 '(?<=[;"\n])[ \t]+'     # trailing space
-'\/\/.*\r\n'            # comments
+'\/\/.*\r?\n?'          # comments
 )
 
 # Join matches to one string, separated by pipe (or).
