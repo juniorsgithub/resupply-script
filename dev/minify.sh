@@ -5,14 +5,14 @@
 
 # Regex matches to be removed.
 remove=(
-'^\s*$'                 # blank lines
-'[ \t]+(?=[ ;"\t\n])'   # leading space 
-'(?<=[;"\n])[ \t]+'     # trailing space
-'\/\/.*\r?\n?'          # comments
+'^\s*$'                                                     # blank lines
+'[ \t]+(?=[ ;"\t\n])'                                       # leading space
+'(?<=[;"\n])[ \t]+'                                         # trailing space
+'^[^"\n]*(?:"[^"\n]*"[^"\n]*)*(?!")[^"\n]*\K\/\/.*\r?\n?'   # comments (not inside quotes)
 )
 
 # Join matches to one string, separated by pipe (or).
-remove=$(printf "|%s" "${remove[@]}")
+remove=$(printf "|(?:%s)" "${remove[@]}")
 # Construct the regex. Remove leading pipe.
 remove="s/${remove:1}//g;"
 
